@@ -40,3 +40,6 @@ bind('n', '<C-p>', ':Files<CR>')
 bind('n', '<C-o>', ':Buffers<CR>')
 bind('n', '<C-l>', ':BLines<CR>')
 
+-- NERDTree
+bind('n', '<C-n>', ':NERDTreeToggle<CR>')
+

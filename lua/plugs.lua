@@ -1,6 +1,6 @@
 vf = require('vfuncs')
 
-vf.plug.begin(vf.stdpath('data') .. '/plugged')
+vf.plug.begin('C:/Users/choco/AppData/Local/nvim-data' .. '/plugged')
 
 -- Fish shell integration
 vim.cmd("Plug 'dag/vim-fish'")
@@ -20,8 +20,7 @@ vim.cmd("Plug 'hugolgst/vimsence'")
 vim.cmd("Plug 'preservim/nerdtree'")
 -- Themes
 vim.cmd("Plug 'morhetz/gruvbox'")
-vim.cmd("Plug 'vim-airline/vim-airline'")
-vim.cmd("Plug 'vim-airline/vim-airline-themes'")
+vim.cmd("Plug 'itchyny/lightline.vim'")
 -- Syntax
 vim.cmd("Plug 'peitalin/vim-jsx-typescript'")
 -- GIT
