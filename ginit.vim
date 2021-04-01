@@ -1,3 +1,3 @@
 GuiTabline 0
 GuiPopupmenu 0
-GuiFont! Cascadia Code PL:h12
+GuiFont! Cascadia Code PL:h13

@@ -15,6 +15,11 @@ af('BufLeave,FocusLost,InsertEnter',   '*', function() vim.wo.relativenumber = f
 -- put numbers and signs in the same column
 vim.wo.signcolumn = 'number'
 
+af('BufWritePre', 'buffer', function()
+  vim.lsp.buf.formatting_sync()
+  vim.cmd(':w<CR>')
+end)
+
 vim.o.mouse = 'a'
 
 -- searching

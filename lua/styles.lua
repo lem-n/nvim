@@ -1,11 +1,8 @@
-vim.cmd('colorscheme gruvbox')
-vim.g.gruvbox_bold = '0'
+vim.cmd('colorscheme gruvbox-material')
+vim.o.background = 'dark'
+vim.g.gruvbox_material_background = 'hard'
 
 vim.g.lightline = {
-  colorscheme = 'jellybeans'
+  colorscheme = 'gruvbox_material'
 }
-
-if vim.o.guifont then
-  vim.o.guifont = 'Cascadia Code PL:h12'
-end
 

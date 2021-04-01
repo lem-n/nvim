@@ -1,4 +1,5 @@
 bind = require 'binds'
+telescope = require 'telescope.builtin'
 
 vim.g.mapleader = ' '
 vim.b.mapleader = ' '
@@ -29,8 +30,10 @@ bind('n', 'j', 'gj')
 bind('n', 'k', 'gk')
 
 -- Easier line end/start jumps
-bind('n', 'H', '^')
-bind('n', 'L', '$')
+bind('n', 'H', '^', 'noremap')
+bind('n', 'L', '$', 'noremap')
+bind('v', 'H', '^', 'noremap')
+bind('v', 'L', '$', 'noremap')
 
 -- Swap buffers fast
 bind('n', '<leader><leader>', '<C-^>', 'noremap')
@@ -42,4 +45,14 @@ bind('n', '<C-l>', ':BLines<CR>')
 
 -- NERDTree
 bind('n', '<C-n>', ':NERDTreeToggle<CR>')
+
+-- Formatting keybind
+bind('n', '<leader>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', 'noremap')
+
+-- Telescope
+bind('n', '<leader>ff', '<cmd>lua require(\'telescope.builtin\').find_files()<cr>' ,'noremap')
+bind('n', '<leader>fg', '<cmd>lua require(\'telescope.builtin\').live_grep()<cr>', 'noremap')
+bind('n', '<leader>fb', '<cmd>lua require(\'telescope.builtin\').buffers()<cr>', 'noremap')
+bind('n', '<leader>fh', '<cmd>lua require(\'telescope.builtin\').help_tags()<cr>', 'noremap')
+
 

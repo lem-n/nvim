@@ -7,6 +7,8 @@ if !has('win32')
   endif
 endif
 
+set nocompatible
+
 lua require 'init'
 
 if has('win32')
