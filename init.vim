@@ -11,6 +11,11 @@ lua require 'init'
 
 if has('win32')
   set shell=cmd
+
+  " Windows bindings
+  source $VIMRUNTIME/mswin.vim
+  inoremap <silent> <S-Insert> <C-R>+
+
   source $HOME/AppData/Local/nvim/lsp-bindings.vim
 else
   source $HOME/.config/nvim/lsp-bindings.vim

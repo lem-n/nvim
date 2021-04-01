@@ -4,8 +4,11 @@ local on_attach = function(client)
   require 'completion'.on_attach(client)
 end
 
+-- TypeScript
+nvim_lsp.tsserver.setup{ on_attach = on_attach }
+
 -- Python
-nvim_lsp.pyright.setup{ on_attach = on_attach}
+nvim_lsp.pyls.setup{ on_attach = on_attach}
 
 -- Rust
 nvim_lsp.rust_analyzer.setup({
