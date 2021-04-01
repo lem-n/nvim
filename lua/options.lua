@@ -15,6 +15,14 @@ af('BufLeave,FocusLost,InsertEnter',   '*', function() vim.wo.relativenumber = f
 -- put numbers and signs in the same column
 vim.wo.signcolumn = 'number'
 
+vim.o.mouse = 'a'
+
+-- searching
+vim.o.gdefault = true
+vim.o.incsearch = true
+vim.o.smartcase = true
+vim.o.ignorecase = true
+
 -- split a new buffer to the right
 vim.o.splitright = true
 -- split new buffer to the bottom
