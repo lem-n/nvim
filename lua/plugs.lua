@@ -1,6 +1,6 @@
 vf = require 'vfuncs'
 
-vf.plug.begin('C:/Users/choco/AppData/Local/nvim-data' .. '/plugged')
+vf.plug.begin(vf.stdpath('data') .. '/plugged')
 
 -- Fish shell integration
 vim.cmd("Plug 'dag/vim-fish'")
