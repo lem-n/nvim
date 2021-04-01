@@ -34,4 +34,4 @@ npm install -g typescript typescript-language-server
 # Python
 python3 -m pip install python-language-server
 
-Write-Host "Make sure to add these to your path: Python3\Scripts, cargo-bin, cargo-bin\bin "
+Write-Host "Make sure to add these to your path: Python39\Scripts, cargo-bin, cargo-bin\bin "
