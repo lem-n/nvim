@@ -1,7 +1,7 @@
 Set-Variable -Name NVIM_CONF_DIR -Value "$env:HOME/AppData/Local/nvim"
 
 # Install Neovim
-choco install neovim -y
+choco install neovim --pre -y
 
 # Required tools
 choco install git -y
