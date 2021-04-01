@@ -1,5 +1,5 @@
-af = require('autofunc')
-bo = require('bufopt')
+af = require 'autofunc'
+bo = require 'bufopt'
 
 -->> window <<--
 
@@ -62,6 +62,9 @@ bo.shiftwidth = 2
 -- convert tabs to spaces
 bo.expandtab = true
 bo.autoindent = true
+
+-- Completion options
+vim.o.completeopt = 'menuone,noinsert,noselect'
 
 -- set language to english
 vim.cmd('language en_US.utf-8')

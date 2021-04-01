@@ -1,4 +1,4 @@
-vf = require('vfuncs')
+vf = require 'vfuncs'
 
 vf.plug.begin(vf.stdpath('data') .. '/plugged')
 
@@ -29,9 +29,10 @@ vim.cmd("Plug 'tpope/vim-fugitive'")
 -- LSP
 vim.cmd("Plug 'neovim/nvim-lspconfig'")
 vim.cmd("Plug 'nvim-lua/completion-nvim'")
+vim.cmd("Plug 'nvim-lua/lsp_extensions.nvim'")
 
 vf.plug['end']()
 
 require('plug.fzf')
 require('plug.startify')
-
+require('plug.lsp')

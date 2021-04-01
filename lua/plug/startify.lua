@@ -1,4 +1,4 @@
-bind = require('binds')
+bind = require 'binds'
 
 -- update session on exit
 vim.g.startify_session_persistence = true

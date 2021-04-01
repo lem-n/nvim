@@ -1,4 +1,4 @@
-bind = require('binds')
+bind = require 'binds'
 
 vim.g.mapleader = ' '
 vim.b.mapleader = ' '
@@ -39,4 +39,7 @@ bind('n', '<leader><leader>', '<C-^>', 'noremap')
 bind('n', '<C-p>', ':Files<CR>')
 bind('n', '<C-o>', ':Buffers<CR>')
 bind('n', '<C-l>', ':BLines<CR>')
+
+-- NERDTree
+bind('n', '<C-n>', ':NERDTreeToggle<CR>')
 
