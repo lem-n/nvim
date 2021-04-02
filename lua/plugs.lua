@@ -47,14 +47,32 @@ vf.plug['end']()
 require('plug.fzf')
 require('plug.startify')
 require('plug.lsp')
-require('lspkind').init()
+require('lspkind').init({
+  with_text = true,
+  symbol_map = {
+    Text = '',
+    Method = 'ƒ',
+    Function = '',
+    Constructor = '',
+    Variable = '',
+    Class = '',
+    Interface = 'ﰮ',
+    Module = '',
+    Property = '',
+    Unit = '',
+    Field = '',
+    Value = '',
+    Enum = '了',
+    Keyword = '',
+    Snippet = '﬌',
+    Color = '',
+    File = '',
+    Folder = '',
+    EnumMember = '',
+    Constant = '',
+    Struct = ''
+  },
+})
 
 vim.cmd [[autocmd CursorHold * lua require'nvim-lightbulb'.update_lightbulb()]]
-
--- require'nvim-treesitter.configs'.setup {
---   ensure_installed = "maintained",
---   highlight = {
---     enable = true,
---   },
--- }
 
