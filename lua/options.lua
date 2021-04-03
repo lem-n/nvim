@@ -15,11 +15,6 @@ af('BufLeave,FocusLost,InsertEnter',   '*', function() vim.wo.relativenumber = f
 -- put numbers and signs in the same column
 vim.wo.signcolumn = 'number'
 
-af('BufWritePre', 'buffer', function()
-  vim.lsp.buf.formatting_sync()
-  vim.cmd(':w<CR>')
-end)
-
 vim.o.mouse = 'a'
 
 -- searching
@@ -69,9 +64,6 @@ bo.shiftwidth = 2
 bo.expandtab = true
 bo.autoindent = true
 
--- Completion options
-vim.o.completeopt = 'menuone,noinsert,noselect'
-
 -- set language to english
 vim.cmd('language en_US.utf-8')
 -- vim.v.lang = 'en_US'
@@ -82,3 +74,7 @@ vim.cmd('syntax on')
 -- enable filetype detection
 vim.cmd('filetype plugin indent on')
 
+-- Vimsence
+vim.g.vimsence_client_id = '439476230543245312'
+vim.g.vimsence_small_text = "NeoVim"
+vim.g.vimsence_small_image = "neovim"

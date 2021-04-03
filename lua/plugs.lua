@@ -33,46 +33,56 @@ vim.cmd("Plug 'sheerun/vim-polyglot'")
 -- vim.cmd("Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}")
 -- GIT
 vim.cmd("Plug 'tpope/vim-fugitive'")
--- LSP
-vim.cmd("Plug 'neovim/nvim-lspconfig'")
-vim.cmd("Plug 'nvim-lua/completion-nvim'")
-vim.cmd("Plug 'nvim-lua/lsp_extensions.nvim'")
-vim.cmd("Plug 'onsails/lspkind-nvim'")
-vim.cmd("Plug 'kosayoda/nvim-lightbulb'")
-vim.cmd("Plug 'RishabhRD/popfix'")
-vim.cmd("Plug 'RishabhRD/nvim-lsputils'")
+-- LSP (will probably work more on this, CoC for now)
+-- vim.cmd("Plug 'neovim/nvim-lspconfig'")
+-- vim.cmd("Plug 'nvim-lua/completion-nvim'")
+-- vim.cmd("Plug 'nvim-lua/lsp_extensions.nvim'")
+-- vim.cmd("Plug 'onsails/lspkind-nvim'")
+-- vim.cmd("Plug 'kosayoda/nvim-lightbulb'")
+-- vim.cmd("Plug 'RishabhRD/popfix'")
+-- vim.cmd("Plug 'RishabhRD/nvim-lsputils'")
+
+-- Language
+-- CoC completion engine
+vim.cmd("Plug 'neoclide/coc.nvim', {'branch': 'release'}")
+-- C# engine
+vim.cmd("Plug 'OmniSharp/omnisharp-vim'")
+vim.cmd("Plug 'nickspoons/vim-sharpenup'")
+
 
 vf.plug['end']()
 
 require('plug.fzf')
 require('plug.startify')
-require('plug.lsp')
-require('lspkind').init({
-  with_text = true,
-  symbol_map = {
-    Text = '',
-    Method = 'ƒ',
-    Function = '',
-    Constructor = '',
-    Variable = '',
-    Class = '',
-    Interface = 'ﰮ',
-    Module = '',
-    Property = '',
-    Unit = '',
-    Field = '',
-    Value = '',
-    Enum = '了',
-    Keyword = '',
-    Snippet = '﬌',
-    Color = '',
-    File = '',
-    Folder = '',
-    EnumMember = '',
-    Constant = '',
-    Struct = ''
-  },
-})
 
-vim.cmd [[autocmd CursorHold * lua require'nvim-lightbulb'.update_lightbulb()]]
+-- LSP plugins
+-- require('plug.lsp')
+-- require('lspkind').init({
+--   with_text = true,
+--   symbol_map = {
+--     Text = '',
+--     Method = 'ƒ',
+--     Function = '',
+--     Constructor = '',
+--     Variable = '',
+--     Class = '',
+--     Interface = 'ﰮ',
+--     Module = '',
+--     Property = '',
+--     Unit = '',
+--     Field = '',
+--     Value = '',
+--     Enum = '了',
+--     Keyword = '',
+--     Snippet = '﬌',
+--     Color = '',
+--     File = '',
+--     Folder = '',
+--     EnumMember = '',
+--     Constant = '',
+--     Struct = ''
+--   },
+-- })
+
+-- vim.cmd [[autocmd CursorHold * lua require'nvim-lightbulb'.update_lightbulb()]]
 

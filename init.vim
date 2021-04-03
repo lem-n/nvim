@@ -18,8 +18,10 @@ if has('win32')
   source $VIMRUNTIME/mswin.vim
   inoremap <silent> <S-Insert> <C-R>+
 
-  source $HOME/AppData/Local/nvim/lsp-bindings.vim
+  source $HOME/AppData/Local/nvim/plugins.vim
+  " source $HOME/AppData/Local/nvim/lsp-bindings.vim
 else
-  source $HOME/.config/nvim/lsp-bindings.vim
+  source $HOME/.config/nvim/plugins.vim
+  " source $HOME/.config/nvim/lsp-bindings.vim
 endif
 
